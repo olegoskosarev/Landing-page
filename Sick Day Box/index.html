@@ -7,12 +7,12 @@
 </head>
 <body>
     <header>
-        <div id="logo"><img src="https://cdn.shopify.com/s/files/1/2225/6647/files/sick_day_box_logo_white_300x90@2x.png?v=1505836370"></div>
+        <img id="logo" src="https://cdn.shopify.com/s/files/1/2225/6647/files/sick_day_box_logo_white_300x90@2x.png?v=1505836370">
         <div id="header-side-left">
             <h1>The Sick Day Survival Kit</h1>
             <p>Everything you need to make it through a sick day.</p>
             <h3>Only $28</h3>
-            <button id="btn-buy-now">BUY NOW</button>
+            <button id="btn-buy-now" class="btn">BUY NOW</button>
         </div>
 
         <div id="header-side-right">
@@ -20,40 +20,40 @@
         </div>
     </header>
 
-    <section id="product">
+    <section id="about-product">
         <h1>What's Inside</h1>
         <div id="inside">
-            <div class="inside-item">
+            <div class="inside-items">
                 <img src="https://cdn.shopify.com/s/files/1/2225/6647/files/12_660x275.png?v=1511141559">
                 <h2>Amazon Movie Rental</h2>
                 <p>Included in the box is a gift card for one movie rental from Amazon.</p>
             </div>
 
-            <div class="inside-item">
+            <div class="inside-items">
                 <img src="https://cdn.shopify.com/s/files/1/2225/6647/files/10_660x275.png?v=1511141827">
                 <h2>Thermometer</h2>
                 <p>You know the old "hand on the forehead trick" doesn't cut it.</p>
             </div>
 
-            <div class="inside-item">
+            <div class="inside-items">
                 <img src="https://cdn.shopify.com/s/files/1/2225/6647/files/6_660x275.png?v=1511141877">
                 <h2>Emergen-C</h2>
                 <p>Immune boosting Vitamin C, B Vitamins, and Electrolytes. It's never too late.</p>
             </div>
 
-            <div class="inside-item">
+            <div class="inside-items">
                 <img src="https://cdn.shopify.com/s/files/1/2225/6647/files/4_660x275.png?v=1511142158">
                 <h2>Hot Cocoa</h2>
                 <p>Because not all drinks needs to be "healthy" when you are sick.</p>
             </div>
 
-            <div class="inside-item">
+            <div class="inside-items">
                 <img src="https://cdn.shopify.com/s/files/1/2225/6647/files/chickensoupsaltinecombo_660x275.png?v=1511142309">
                 <h2>Saltines + Chicken Noodle Soup</h2>
                 <p>What's a sick day without some chicken noodle soup and some Saltines in the mix?</p>
             </div>
 
-            <div class="inside-item">
+            <div class="inside-items">
                 <img src="https://cdn.shopify.com/s/files/1/2225/6647/files/11_660x275.png?v=1511142417">
                 <h2>Ginger Drops</h2>
                 <p>Feeling queasy? These ginger candies are a safe and tasty fix.</p>
@@ -64,7 +64,7 @@
 
     <section id="more-about-product">
         <h2>And so much more...</h2>
-        <div id="more-items">
+        <div id="extra">
             <div>Ginger ale</div>
             <div>Herbal Tea</div>
             <div>Breath Mints</div>
@@ -76,30 +76,35 @@
 
     <section id="buy-now">
         <h1>Buy Now</h1>
-        <div id="b-n-wrapper">
+        <div id="buy-now-wrapper">
 
-            <div id="b-n-w-s-left">
+            <div id="buy-now-left-side">
                 <img src="https://cdn.shopify.com/s/files/1/2225/6647/products/IMG_0004_2048x2048.png?v=1506535251">           
             </div>
                 
-            <div id="b-n-w-s-right">
+            <div id="buy-now-right-side">
                 <h2>Sick Day Box</h2>
-                <p><span>$28.00</span><span id="sale">$38.00</span></p> 
-                <p id="amount">Quantity<input type="text" placeholder="1"><button id="btn-add-to-cart">ADD TO CART</button>
+                <p>
+                    <span>$28.00</span><span id="sale">$38.00</span>
+                </p> 
+                <p id="quantity">
+                    <label for="quantity-field">Quantity</label>
+                    <input type="text" id="quantity-field" name="quantity-field" placeholder="1">
+                    <button id="btn-add-to-cart" class="btn">ADD TO CART</button>
+                </p>
                 <p>Stash it till you need it. Your future self will thank you.</p>
             </div>
 
-        </div>
-        
+        </div> 
     </section>
 
     <section id="feedback">
-        <div id="feedback-l-s">
+        <div id="feedback-left-side">
             <img src="https://cdn.shopify.com/s/files/1/2225/6647/files/image22_60x60.jpg?v=1511110269">
         </div>
-        <div id="feedback-r-s">
-            <p id="feedback-text">Really helpful and useful for 20 somethings like me. I never take care of myself so I'm glad this box does.</p>
-            <p id="person">– Mary - California</p>
+        <div id="feedback-right-side">
+            <p id="feedback-message">Really helpful and useful for 20 somethings like me. I never take care of myself so I'm glad this box does.</p>
+            <h4>– Mary - California</h4>
         </div>
     </section>
 </body>
