@@ -324,5 +324,37 @@ header {
 
 footer {
     height: 50vh;
+    padding: 2.5% 15% 2.5% 15%;
     background-color: #404657;
+}
+
+footer h4 {
+    margin-bottom: 5%;
+    color: #fff;
+}
+
+footer div {
+    margin-bottom: 2%;
+}
+
+footer div a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-networks {
+    display: inline-block;
+    width: 15px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+footer div:last-child {
+    margin-top: 10%;
+    color: #C6C8CD;
+}
+
+.payment-system {
+    margin-right: 5%;
+    font-size: 40px;
 }
