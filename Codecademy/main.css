@@ -17,12 +17,13 @@ header {
 
 #header-content {
     height: 55px;
+    margin: 0 5%;
     display: flex;
     justify-content: center;
 }
 
 #header-content-left {
-    flex-basis: 42.5%;
+    flex: 1;
     display: flex;
     align-items: center;
 }
@@ -49,7 +50,7 @@ header {
 }
 
 #headre-content-right {
-    flex-basis: 42.5%;
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -81,6 +82,15 @@ header hr {
     }
 }
 
+/* @media (max-width: 400px) {
+    #header-content {
+        width: 400px;
+        box-sizing: border-box;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+} */
+
 /**************************************************** ******************************************************/
 
 #join-us-content {
@@ -89,7 +99,46 @@ header hr {
 
 #join-us-content-left {
     flex: 1;
-    background-color: silver;
+    position: relative;
+}
+
+#join-us-img-1 {
+    position: absolute;
+    width: 75%;
+    top: 10%;
+    right: 0;
+    z-index: 2;
+}
+
+#join-us-img-2 {
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+    right: 50%;
+    z-index: 3;
+}
+
+#join-us-img-3 {
+    position: absolute;
+    width: 40%;
+    top: 3%;
+    right: 10%;
+    z-index: 1;
+}
+
+#join-us-text {
+    position: absolute;
+    width: 320px;
+    height: 190px;
+    box-sizing: border-box;
+    padding-top: 45px;
+    top: 315px; 
+    font-size: 27px; 
+    font-weight: bold;
+    text-align: center;
+    background-color: #6400E4;
+    color: #fff;
+    z-index: 4;
 }
 
 #join-us-content-right {
@@ -97,7 +146,10 @@ header hr {
 }
 
 #join-us-content-right-inner {
-    width: 360px;
+    width: 400px;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
     margin: 60px auto 20px;
 }
 
@@ -138,7 +190,7 @@ header hr {
 }
 
 #networks-wrapper div {
-    width: 80px;
+    width: 70px;
     height: 50px;
     text-align: center;
     border: 2px solid #E9EAEA;
@@ -152,5 +204,30 @@ header hr {
 @media (max-width: 760px) {
     #join-us-content-left {
         display: none;
+    }
+}
+
+@media (min-width: 1300px) {
+    #join-us-img-1  {
+        width: 500px;
+    }
+
+    #join-us-img-2 {
+        width: 250px;
+        right: 330px;
+    }
+
+    #join-us-img-3 {
+        width: 260px;
+        right: 70px; 
+    }
+
+    #join-us-text {
+        width: 395px;
+        height: 200px;
+        right: 280px;
+        top: 240px;
+        font-size: 40px; 
+        padding-top: 30px;
     }
 }
