@@ -82,7 +82,7 @@ header hr {
     margin: 0;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) { /* 768px - iPad */
     #header-content-left span,
     #btn-upgrade-to-pro {
         display: none;
@@ -274,7 +274,7 @@ header hr {
 
 #steps {
     min-width: 400px;
-    min-height: 400px;
+    position: relative;
     box-sizing: border-box;
     padding-top: 12.5%;
     background-image: url(https://www.codecademy.com/webpack/97c231317f3aee5c720fdc9f98693562.svg);
@@ -282,10 +282,13 @@ header hr {
     background-size: 100%;
 }
 
+#steps-wrapper {
+    background-color: #F1F3FE;
+}
+
 #steps-content {
     box-sizing: border-box;
     padding: 0% 10%;
-    background-color: #F1F3FE;
 }
 
 #steps-content h1 {
@@ -297,7 +300,6 @@ header hr {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    background-color: #F1F3FE;
 }
 
 .steps-item {
@@ -397,5 +399,38 @@ header hr {
     .steps-left img {
         margin-right: 10%;
         margin-left: 10%;
+    }
+}
+
+/**************************************************  **************************************************/
+
+#our-learners {
+    box-sizing: border-box;
+    padding-top: 50px;
+    text-align: center;
+    background-color: #F1F3FE;
+}
+
+#our-learners h1 {
+    margin-top: 0;
+}
+
+#our-learners img {
+    width: 80%;
+}
+
+/********************************************** ***************************************************/
+
+@media (min-width: 1400px) {
+    #header-content,
+    #join-us-content,
+    #steps-content,
+    #our-learners {
+        width: 1400px;
+        margin: 0 auto;
+    }
+
+    #steps-content {
+        padding: 0 140px
     }
 }
