@@ -2,7 +2,6 @@
 
 html, body {
     margin: 0;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Lato', sans-serif;
 }
 
@@ -301,24 +300,29 @@ header hr {
     background-color: #F1F3FE;
 }
 
-#steps-first {
+.steps-item {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 75px; /* Вычислить в процентах */
 }
 
-#steps-first-left {
+.steps-left, 
+.steps-right {
     flex: 1;
     flex-basis: 409.6px; /* (1024 - 102.4 * 2) / 2 */
+}
+
+.steps-left {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
-#steps-first-left img {
-    max-width: 50%;
+.steps-left img {
+    max-width: 50%; /* 204.8 = 409.6 / 2 */
 }
 
-#circle-outer {
+.circle-outer {
     position: relative;
     top: -10px;
     width: 100px;
@@ -327,7 +331,7 @@ header hr {
     box-shadow: inset 0 0 5px rgba(150, 150, 150, 0.5);
 }
 
-#circle-1 {
+.circle {
     position: relative;
     top: 15px;
     left: 15px;
@@ -343,27 +347,38 @@ header hr {
     box-shadow: 0 0 5px rgba(150, 150, 150, 0.5);
 }
 
-#steps-first-right {
-    flex: 1;
-    flex-basis: 409.6px; /* (1024 - 102.4 * 2) / 2 */
+.steps-right p {
+    font-size: 18px;
 }
 
-#steps-second {
-    background-color: pink;
-    height: 200px;
+@media (max-width: 768px) {
+    .circle-outer {
+        top: -10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle {
+        top: 7.5px;
+        left: 7.5px;
+        width: 35px;
+        height: 35px;
+        padding-top: 5px;
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1023px) {
-    #steps-first-left img {
+    .steps-left img {
         margin-right: 10%;
         margin-left: 5%;
     }
     
-    #steps-first-right h2 {
+    .steps-right h2 {
         text-align: center;
     }
     
-    #steps-first-right p {
+    .steps-right p {
         width: 85%;
         margin: 0 auto;
         text-align: center;
@@ -371,26 +386,16 @@ header hr {
 } 
 
 @media (min-width: 1024px) {
-    #steps-first-left {
-        justify-content: flex-end;
-    }
-    
-    #steps-first-left img {
-        margin-right: 10%;
-        margin-left: 10%;
-    }
-    
     #steps-content h1 {
         font-size: 2.25em;
     }
-
-    #steps-first-right p {
-        font-size: 15px;
+    
+    .steps-left {
+        justify-content: flex-end;
     }
-}
-
-@media (min-width: 1200px) {
-    #steps-first-right p {
-        font-size: 18px;
+    
+    .steps-left img {
+        margin-right: 10%;
+        margin-left: 10%;
     }
 }
