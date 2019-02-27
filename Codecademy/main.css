@@ -305,7 +305,7 @@ header hr {
 .steps-item {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 75px; /* Вычислить в процентах */
+    margin-bottom: 7.5%;
 }
 
 .steps-left, 
@@ -404,11 +404,14 @@ header hr {
 
 /**************************************************  **************************************************/
 
-#our-learners {
-    box-sizing: border-box;
-    padding-top: 50px;
-    text-align: center;
+.bg {
     background-color: #F1F3FE;
+}
+
+#our-learners {
+    min-width: 400px;
+    padding: 3% 0;
+    text-align: center;
 }
 
 #our-learners h1 {
@@ -419,18 +422,56 @@ header hr {
     width: 80%;
 }
 
+@media (max-width: 767px) {
+    #bg-2 {
+        background-color: #fff;
+    }
+
+    #our-learners {
+        padding: 5% 0;
+    }
+}
+
+/********************************************** ***************************************************/
+
+#video {
+    min-width: 400px;
+    position: relative;
+    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    height: 0;
+    overflow: hidden;
+}
+
+#video iframe {
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    width: 95%;
+    height: 100%;
+}
+
 /********************************************** ***************************************************/
 
 @media (min-width: 1400px) {
     #header-content,
     #join-us-content,
     #steps-content,
-    #our-learners {
-        width: 1400px;
+    #our-learners,
+    #video {
+        max-width: 1400px;
         margin: 0 auto;
     }
 
     #steps-content {
         padding: 0 140px
+    }
+
+    #video {
+        padding-bottom: 770px;
+    }
+
+    #video iframe {
+        width: 1330px;
+        height: 731.25px;
     }
 }
