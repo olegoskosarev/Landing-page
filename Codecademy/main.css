@@ -482,7 +482,7 @@ header hr {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 10% 0;
+    padding: 10% 0 20%;
 }
 
 #feedback-left,
@@ -568,13 +568,140 @@ header hr {
 
 /********************************************** ***************************************************/
 
+ #promotion-header-wrapper {
+    min-width: 400px;
+    height: 160px;
+} 
+
+#promotion-header {
+    position: relative;
+    top: -50px;
+    width: 70%;
+    margin: 0 auto;
+    height: 160px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+}
+
+#promotion-section {
+    box-sizing: border-box;
+}
+
+#promotion {
+    min-width: 400px;
+}
+
+.promotion-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto 5%;
+}
+
+.promotion-item {
+    flex-basis: 46%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.promotion-item-left {
+    flex-basis: 10%;
+    text-align: right;
+}
+
+.promotion-item-right {
+    flex-basis: 70%;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.promotion-item-right-head {
+    margin-bottom: 15px;
+    border-bottom: 3px solid #000;
+}
+
+.promotion-item-right-head h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.promotion-item-right-body {
+    font-size: 18px;
+}
+
+#btn-get-started {
+    display: block;
+    width: 22.5%;
+    height: 60px;
+    margin: 0 auto 5%;
+    border-radius: 60px;
+    background-color: #6400E4;
+    font-size: 20px;
+    color: #fff;
+}
+
+#btn-get-started:hover {
+    box-shadow: 0 5px 6px rgba(30, 30, 30, 0.25), 1px 1px rgba(0,0,0,0.22);
+}
+
+@media (max-width: 767px) {
+    #promotion-header-wrapper {
+        height: 150px;
+    } 
+
+    #promotion-header {
+        height: 150px;
+        top: 0;
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    
+    .promotion-items {
+        margin-bottom: 0;
+    }
+    
+    .promotion-item {
+        flex-basis: 100%;
+        justify-content: initial;
+    }
+
+    .promotion-item-left {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .promotion-item-right {
+        flex-basis: 100%;
+        padding-left: 0;
+        margin-bottom: 10%;
+    }
+
+    .promotion-item-right-head h1 {
+        text-align: center;
+    }
+
+    #btn-get-started {
+        width: 40%;
+    }
+} 
+
+/********************************************** ***************************************************/
+
 @media (min-width: 1400px) {
     #header-content,
     #join-us-content,
     #steps-content,
     #our-learners,
     #video-content,
-    #feedback {
+    #feedback,
+    #promotion {
         max-width: 1400px;
         margin: 0 auto;
     }
@@ -590,5 +717,20 @@ header hr {
     #video-content iframe {
         width: 1330px;
         height: 731.25px;
+    }
+
+    #feedback {
+        padding: 140px 0 270px;
+        /* 
+            Высчитать правильно!
+        */
+    }
+
+    #promotion-header {
+        max-width: 980px;
+    }
+
+    #btn-get-started {
+        width: 315px;
     }
 }
