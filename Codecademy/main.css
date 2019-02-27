@@ -437,17 +437,133 @@ header hr {
 #video {
     min-width: 400px;
     position: relative;
+    background-color: #F1F3FE;
+}
+
+#video-content {
+    position: relative;
     padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
     height: 0;
     overflow: hidden;
 }
 
-#video iframe {
+#video-content iframe {
     position: absolute;
-    top: 2.5%;
+    /* top: 2%; */
     left: 2.5%;
     width: 95%;
     height: 100%;
+    z-index: 1;
+}
+
+#video-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #141C3A;
+    z-index: 0;
+}
+
+@media (max-width: 399px) {
+    #video-bottom {
+        background-color: inherit;    
+    }
+}
+
+/********************************************** ***************************************************/
+
+#bg-3 {
+    min-width: 400px;
+    background-color: #141C3A;
+}
+
+#feedback {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10% 0;
+}
+
+#feedback-left,
+#feedback-right {
+    flex: 1;
+    flex-basis: 512px;
+}
+
+#feedback-left {
+    position: relative;
+}
+
+#feedback-img-1 {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#feedback-img-2 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    width: 57.5%;
+    z-index: 0;
+}
+
+#feedback-img-3 {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 17.5%;
+    z-index: 2;
+}
+
+#feedback-img-4 {
+    position: absolute;
+    transform: rotate(90deg);
+    bottom: 0;
+    right: 20%;
+    width: 12.5%;
+    z-index: 2;
+}
+
+#feedback-right {
+    box-sizing: border-box;
+    padding-left: 10%;
+    color: #fff;
+}
+
+#feedback-text {
+    width: 80%;
+    margin-top: 0;
+    font-size: 35px;
+}
+
+#feedback-author {
+    font-size: 20px;
+}
+
+@media (max-width: 1023px) {
+    #feedback-img-2,
+    #feedback-img-3,
+    #feedback-img-4 {
+        display: none;
+    }
+
+    #feedback-right {
+        padding-left: 0;
+    }
+
+    #feedback-text {
+        margin: 10% auto 5%;
+        font-size: 25px;
+    }
+    
+    #feedback-author {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 /********************************************** ***************************************************/
@@ -457,7 +573,8 @@ header hr {
     #join-us-content,
     #steps-content,
     #our-learners,
-    #video {
+    #video-content,
+    #feedback {
         max-width: 1400px;
         margin: 0 auto;
     }
@@ -466,11 +583,11 @@ header hr {
         padding: 0 140px
     }
 
-    #video {
+    #video-content {
         padding-bottom: 770px;
     }
 
-    #video iframe {
+    #video-content iframe {
         width: 1330px;
         height: 731.25px;
     }
