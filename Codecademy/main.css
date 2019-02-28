@@ -568,39 +568,40 @@ header hr {
 
 /********************************************** ***************************************************/
 
- #promotion-header-wrapper {
+#promotion-section {
     min-width: 400px;
-    height: 160px;
-} 
+    box-sizing: border-box;
+    background-image: url(https://www.codecademy.com/webpack/fb2e4b44c5ca46028e9bfb9452590086.svg);
+    background-repeat: no-repeat;
+    background-size: 925px;   
+    background-position: 65% 50%;
+}
 
-#promotion-header {
+#promotion-content-wrapper {
     position: relative;
-    top: -50px;
+    top: -75px;
     width: 70%;
     margin: 0 auto;
-    height: 160px;
-    box-sizing: border-box;
-    padding-top: 50px;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 5%;
     background-color: #fff;
 }
 
-#promotion-section {
-    box-sizing: border-box;
-}
-
-#promotion {
-    min-width: 400px;
+#promotion-header {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 75px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .promotion-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 70%;
-    margin: 0 auto 5%;
+
+    margin-bottom: 5%;
 }
 
 .promotion-item {
@@ -637,9 +638,9 @@ header hr {
 
 #btn-get-started {
     display: block;
-    width: 22.5%;
+    width: 30%;
     height: 60px;
-    margin: 0 auto 5%;
+    margin: 0 auto;
     border-radius: 60px;
     background-color: #6400E4;
     font-size: 20px;
@@ -650,14 +651,26 @@ header hr {
     box-shadow: 0 5px 6px rgba(30, 30, 30, 0.25), 1px 1px rgba(0,0,0,0.22);
 }
 
+@media (max-width: 1299px) {
+    #promotion-section {
+        background-image: initial;
+    }
+
+    #promotion-header {
+        width: 75%;
+        padding-bottom: 50px;
+    }
+    
+}
+
 @media (max-width: 767px) {
-    #promotion-header-wrapper {
-        height: 150px;
+    #promotion-content-wrapper {
+        width: 95%;
+        top: 0;
+        padding-top: 0;
     } 
 
     #promotion-header {
-        height: 150px;
-        top: 0;
         padding-top: 20px;
         font-size: 30px;
     }
@@ -688,7 +701,7 @@ header hr {
     }
 
     #btn-get-started {
-        width: 40%;
+        width: 50%;
     }
 } 
 
@@ -701,7 +714,7 @@ header hr {
     #our-learners,
     #video-content,
     #feedback,
-    #promotion {
+    #promotion-section {
         max-width: 1400px;
         margin: 0 auto;
     }
@@ -724,10 +737,6 @@ header hr {
         /* 
             Высчитать правильно!
         */
-    }
-
-    #promotion-header {
-        max-width: 980px;
     }
 
     #btn-get-started {
