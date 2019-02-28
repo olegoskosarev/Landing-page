@@ -786,6 +786,118 @@ header hr {
 
 /********************************************** ***************************************************/
 
+#directions-section {
+    min-width: 400px;
+    background-color: #141C3A;
+    color: #fff;
+}
+
+#directions-wrapper {
+    position: relative;
+}
+
+#directions-img-1 {
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+}
+
+#directions-img-2 {
+    position: absolute;
+    top: -12.5%;
+    right: 2.5%;
+    width: 100px;
+}
+
+#directions-header {
+    width: 40%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 5% 0;
+}
+
+#directions-header p {
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#text-color-first {
+    color: #6DF0C2;
+}
+
+#text-color-second {
+    color: #FFC740;
+}
+
+#directions-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.direction {
+    flex-basis: 30%;
+}
+
+.direction-name {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: 3px solid #fff;
+}
+
+.direction-technology-list {
+    margin-top: .75em;
+}
+
+.direction-technology-item {
+    display: inline-block;
+    margin-right: 10%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.direction-technology-item:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #FFC740;
+}
+
+.direction-description {
+    margin-top: 1em;
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    #directions-section {
+        margin-top: 60px;
+    }
+
+    #directions-img-2 {
+        position: absolute;
+        top: -7.5%;
+        right: 2.5%;
+        width: 50px;
+    }
+
+    #directions-header {
+        width: 80%;
+        padding: 60px 0 25px;
+    }
+
+    #directions-header p {
+        font-size: 35px;
+    }
+}
+
+/********************************************** ***************************************************/
+
 @media (min-width: 1400px) {
     #header-content,
     #join-us-content,
@@ -794,7 +906,8 @@ header hr {
     #video-content,
     #feedback,
     #promotion-section,
-    #code-content {
+    #code-content,
+    #directions-wrapper {
         max-width: 1400px;
         margin: 0 auto;
     }
