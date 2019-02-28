@@ -862,11 +862,20 @@ header hr {
 }
 
 .direction-technology-item:before {
-    content: "";
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #FFC740;
+    content: "●";
+    margin-right: 5px;
+}
+
+.item-1:before {
+    color: #FFC740;
+}
+
+.item-2:before {
+    color: #6DF0C2;
+}
+
+.item-3:before {
+    color: #6400E4;
 }
 
 .direction-description {
