@@ -707,6 +707,85 @@ header hr {
 
 /********************************************** ***************************************************/
 
+#code-section {
+    min-width: 400px;
+    padding-top: 75px;
+}
+
+#code-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#code-left {
+    min-height: 540px;
+    flex-basis: 40%;
+    position: relative;
+}
+
+#code-img {
+    position: absolute;
+    right: -75px;
+}
+
+#code-right {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+#code-right-inner {
+    position: relative;
+    top: -10%;
+    left: 15%;
+    width: 65%;
+}
+
+#code-right-inner h1 {
+    font-size: 45px;
+}
+
+#code-right-inner p {
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    #code-left {
+        flex-basis: 100%;
+        min-height: initial;
+    }
+
+    #code-left,
+    #code-right {
+        flex-basis: 100%;
+    }
+
+    #code-img {
+        position: relative;
+        right: initial;
+        left: 10%;
+        width: 85%;
+    }
+
+    #code-right-inner {
+        top: 0;
+        left: 10%;
+        width: 80%;
+    }
+
+    #code-right-inner h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #code-right-inner p {
+        font-size: 17px;
+    }
+}
+
+/********************************************** ***************************************************/
+
 @media (min-width: 1400px) {
     #header-content,
     #join-us-content,
@@ -714,7 +793,8 @@ header hr {
     #our-learners,
     #video-content,
     #feedback,
-    #promotion-section {
+    #promotion-section,
+    #code-content {
         max-width: 1400px;
         margin: 0 auto;
     }
