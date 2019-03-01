@@ -787,6 +787,7 @@ header hr {
 /********************************************** ***************************************************/
 
 #directions-section {
+    position: relative;
     min-width: 400px;
     background-color: #141C3A;
     color: #fff;
@@ -794,12 +795,14 @@ header hr {
 
 #directions-wrapper {
     position: relative;
+    padding-bottom: 5%;
 }
 
 #directions-img-1 {
     position: absolute;
     top: 5%;
     left: 2.5%;
+    z-index: 2;
 }
 
 #directions-img-2 {
@@ -807,13 +810,14 @@ header hr {
     top: -12.5%;
     right: 2.5%;
     width: 100px;
+    z-index: 2;
 }
 
 #directions-header {
     width: 40%;
     max-width: 520px;
     margin: 0 auto;
-    padding: 5% 0;
+    padding: 2.5% 0;
 }
 
 #directions-header p {
@@ -883,6 +887,79 @@ header hr {
     font-size: 18px;
 }
 
+.directions-icons {
+    position: absolute;
+    font-size: 50px;
+    color: #454B62;
+    z-index: 1;
+}
+
+#directions-icon-1 {
+    top: 12.5%;
+    left: 2.5%;
+}
+
+#directions-icon-2 {
+    top: 10%;
+    left: 25%;
+}
+
+#directions-icon-3 {
+    top: 3%;
+    left: 55%;
+}
+
+#directions-icon-4 {
+    top: 11%;
+    left: 75%;
+}
+
+#directions-icon-5 {
+    top: 2%;
+    left: 87.5%;
+}
+
+#directions-icon-6 {
+    top: 30%;
+    left: 15%;
+}
+
+#directions-icon-7 {
+    top: 27.5%;
+    left: 90%;
+}
+
+#directions-icon-8 {
+    top: 37.5%;
+    left: 22.5%;
+}
+
+#directions-icon-9 {
+    top: 52.5%;
+    left: 10%;
+}
+
+#directions-icon-10 {
+    top: 55%;
+    left: 30%;
+}
+
+#directions-icon-11 {
+    top: 60%;
+    left: 67.5%;
+}
+
+#directions-icon-12 {
+    top: 48.5%;
+    left: 80%;
+}
+
+#directions-icon-13 {
+    top: 60.5%;
+    left: 92.5%;
+}
+
+
 @media (max-width: 767px) {
     #directions-section {
         margin-top: 60px;
@@ -902,6 +979,28 @@ header hr {
 
     #directions-header p {
         font-size: 35px;
+    }
+
+    .direction {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+
+    .direction-name {
+        justify-content: flex-start;
+    }
+
+    .direction-name h1{
+        font-size: 20px;
+    }
+
+    .direction-technology-item {
+        margin-right: 2.5%;
+        font-size: 16px;
+    }
+
+    .directions-icons {
+        display: none;
     }
 }
 
