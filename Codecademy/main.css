@@ -1187,6 +1187,99 @@ header hr {
 
 /********************************************** ***************************************************/
 
+footer {
+    background-color: #15141F;
+    min-width: 400px;
+}
+
+#footer-content {
+    
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    color: #A1A1A5;
+}
+
+#footer-item-1 {
+    flex-basis: 15%;
+}
+
+#footer-item-2 {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer-item-3 {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#footer-logo {
+    width: 160px;
+}
+
+#footer-item-2 span,
+#footer-item-2 a {
+    margin: 0 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#footer-item-2 a {
+    text-decoration: none;   
+    color: #A1A1A5;
+}
+
+#footer-item-3 a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #A1A1A5;
+}
+
+#twitter-icon {
+    margin: 0 20px;
+}
+
+@media (max-width: 767px) {
+    #footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding-left: 15px;
+    }
+
+    #footer-item-1,
+    #footer-item-2,
+    #footer-item-3 {
+        width: 100%;
+    }
+
+    #footer-item-1 {
+        margin-top: 30px;
+    }
+
+    #footer-item-2 {
+        margin: 35px 0;
+        flex-direction: column;
+    }
+
+    #footer-item-3 {
+        margin-bottom: 60px;
+        justify-content: flex-start;
+    }
+
+    #footer-item-2 span,
+    #footer-item-2 a {
+        margin: 2.5px 0;
+    }
+}
+
+/********************************************** ***************************************************/
+
 @media (min-width: 1400px) {
     #header-content,
     #join-us-content,
@@ -1198,7 +1291,8 @@ header hr {
     #code-content,
     #directions-wrapper,
     #join-45-wrapper,
-    #last-section-content {
+    #last-section-content,
+    #footer-content {
         max-width: 1400px;
         margin: 0 auto;
     }
